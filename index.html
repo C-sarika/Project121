@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Tails - Help Stray Dogs</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ff914d;
+            padding: 15px 40px;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?stray-dog,help') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero .btn {
+            background-color: #ff914d;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #e67e22;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff914d;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .section-img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Help Cards */
+        .help-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Donate Section */
+        .donate {
+            background-color: #ff914d;
+            color: white;
+        }
+
+        .donate .btn {
+            background-color: white;
+            color: #ff914d;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .donate .btn:hover {
+            background-color: #f4f4f4;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #333;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero {
+                padding: 50px 20px;
+                height: auto;
+                text-align: center;
+            }
+
+            .help-options {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">🐾 Street Tails</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#help">How to Help</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Help Give Street Dogs a Second Chance</h1>
+            <p>Join our mission to rescue, feed, and care for stray dogs.</p>
+            <a href="#donate" class="btn">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="about">
+        <h2>Who We Are</h2>
+        <img src="https://source.unsplash.com/600x400/?rescue-dog,shelter" alt="About Us" class="section-img">
+        <p>Street Tails is a non-profit organization dedicated to rescuing and rehabilitating street dogs. We provide food, shelter, and medical care to those in need.</p>
+    </section>
+
+    <!-- How to Help -->
+    <section id="help" class="help">
+        <h2>How You Can Help</h2>
+        <img src="https://i.pinimg.com/736x/fe/3b/af/fe3bafd9af3af62c4ac9c457f66abb22.jpg" alt="Help Image" class="section-img">
+        <div class="help-options">
+            <div class="card">
+                <h3>🐶 Adopt</h3>
+                <p>Give a rescued dog a loving home.</p>
+            </div>
+            <div class="card">
+                <h3>🏡 Foster</h3>
+                <p>Temporarily care for a dog in need.</p>
+            </div>
+            <div class="card">
+                <h3>❤️ Donate</h3>
+                <p>Your support helps us feed and treat stray dogs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rescue Stories -->
+    <section id="stories" class="stories">
+        <h2>Rescue Stories</h2>
+        <img src="https://i.pinimg.com/736x/a8/36/27/a836276484e16b080fbbd9e099ef22f1.jpg" alt="Rescue Stories" class="section-img">
+        <p>Meet Lucky, a stray dog who found a loving home through our efforts.</p>
+    </section>
+
+    <!-- Donate -->
+    <section id="donate" class="donate">
+        <h2>Support Our Cause</h2>
+        <img src="https://source.unsplash.com/600x400/?dog,donation" alt="Donate" class="section-img">
+        <p>Every donation helps provide food, shelter, and medical care for stray dogs.</p>
+        <a href="#" class="btn">Donate Now</a>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@streettails.org</p>
+        <p>Phone: +123 456 7890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Street Tails. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
